@@ -1,0 +1,126 @@
+<template>
+  <div class="aaa">
+    <div id="map" class="map" ref="map"></div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { Map, View, Feature, Overlay } from 'ol'
+import { Tile, Image } from 'ol/layer'
+import { Vector as srcVector, WMTS, ImageStatic } from 'ol/source'
+import { GeoJSON } from 'ol/format';
+import * as olProj from 'ol/proj';
+import * as olExtent from 'ol/extent';
+import WMTSTileGrid from 'ol/tilegrid/WMTS';
+import * as style from 'ol/style';
+import { Geometry, Point } from 'ol/geom'
+import 'ol/ol.css'
+import { onMounted } from 'vue';
+
+let map: Map  // 存放地图实例
+
+const normalStyle = (feature: any) => {
+  let fillColor = feature.values_.name === '攸县' ? '#81C1F2' : '#d8e5fa'
+  return new style.Style({
+    fill: new style.Fill({
+      color: fillColor,
+    }),
+    stroke: new style.Stroke({
+      color: '#004188',
+      width: 1
+    }),
+    text: new style.Text({
+      font: '14px sans-serif',
+      text: feature.values_.name,
+      fill: new style.Fill({
+        color: '#333',
+      }),
+    }),
+  })
+}
+const tdLayer = () => {
+  const pr = olProj.get('EPSG:4326') as olProj.Projection
+  const projectionExtent = pr.getExtent()
+  const size = olExtent.getWidth(projectionExtent) / 256
+  const re = [] as number[]
+  const ma = [] as string[]
+  for (let index = 0; index < 15; index++) {
+    re[index] = size / Math.pow(2, index)
+    ma[index] = index + ''
+  }
+  // 天地图矢量底图
+  const tiandiLayer = new Tile({
+    className: 'tiandi',
+    source: new WMTS({
+      // name: '矢量底图',
+      url: 'http://t0.tianditu.gov.cn/vec_c/wmts?tk=026c58446d10e67709ba0dafdb78dfaa',
+      layer: 'vec',
+      style: 'default',
+      format: 'tiles',
+      matrixSet: 'c',
+      wrapX: true, // 地图缩小后，防止在一个页面出现多个一样的地图
+      tileGrid: new WMTSTileGrid({
+        origin: olExtent.getTopLeft(projectionExtent),
+        resolutions: re,
+        matrixIds: ma
+      })
+    }),
+    opacity: 0.6
+  })
+
+  return tiandiLayer
+}
+
+
+function initMap() {
+
+  var extent = [112.69847, 27.845067, 113.972341, 26.027134];
+  var imgLayer = new Image({
+    source: new ImageStatic({
+      // url: 'http://image.data.cma.cn/vis/SURF_TL1/20220317/20220317040000_866c9ee8-fb7f-4be2-865f-e6d3c827d6bf_surf_TEM_Min.txt_0.png.png', // 根据需求添加
+      url: new URL('../../assets/img/zzdz.png', import.meta.url).href, // 根据需求添加
+      imageExtent: olProj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857'),
+      projection: "EPSG:3857",
+    })
+  });
+
+  map = new Map({
+    target: 'map',
+    layers: [
+      // tdLayer(),
+      imgLayer
+    ],
+    view: new View({
+      center: [
+        113.842774, 27.009552
+      ],
+      zoom: 9,
+      minZoom: 6.8,
+      maxZoom: 16,
+      projection: "EPSG:4326",
+      // extent: [112.5, 37.910438, 120.4, 40.934719]
+    })
+  })
+
+}
+
+
+
+
+onMounted(() => {
+  initMap()
+})
+
+
+</script>
+
+<style scoped lang="scss">
+.aaa {
+  width: 100%;
+  height: 100%;
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
