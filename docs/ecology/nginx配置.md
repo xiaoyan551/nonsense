@@ -2,7 +2,7 @@
 
 
 
-```config
+```
 server {
 		listen 8020;
 		server_name 10.10.0.99;

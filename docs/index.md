@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /html&css/
+      link: /html_css/
 features:
   - icon: ⚡️
     title: 学习笔记

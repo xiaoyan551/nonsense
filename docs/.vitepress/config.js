@@ -10,7 +10,7 @@ module.exports = {
     // 启动页面丝滑滚动
     smoothScroll: true,
     nav: [
-      { text: '笔记', link: '/html&css/scss中的写法' },
+      { text: '笔记', link: '/html_css/index' },
       { text: '胡说八道', link: '/guide/test' },
       { text: '简书', link: 'https://www.jianshu.com/u/b5a09842e044' }
     ],
@@ -18,17 +18,17 @@ module.exports = {
       // '/html&css/': [
       {
         text: 'HTML&CSS',
-        items: [{ text: 'Scss', link: '/html&css/scss中的写法' }]
+        items: [{ text: 'Scss', link: '/html_css/scss中的写法' }]
       },
       {
         text: 'JS&TS',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'this指向', link: '/js&ts/this指向、闭包' },
-          { text: '异步编程', link: '/js&ts/Promise' },
-          { text: '原型&原型链', link: '/js&ts/原型链' },
-          { text: 'ts', link: '/js&ts/ts' }
+          { text: 'this指向', link: '/js_ts/this指向、闭包' },
+          { text: '异步编程', link: '/js_ts/Promise' },
+          { text: '原型&原型链', link: '/js_ts/原型链' },
+          { text: 'ts', link: '/js_ts/ts' }
         ]
       },
       {
@@ -48,7 +48,7 @@ module.exports = {
       {
         text: '项目开发',
         items: [
-          { text: 'vite + ts 项目搭建', link: '/project/vite + ts 项目搭建' },
+          { text: 'vite + ts 项目搭建', link: '/project/vue3项目搭建' },
           {
             text: '在vue项目中静态配置URL',
             link: '/project/在vue项目中静态配置URL'

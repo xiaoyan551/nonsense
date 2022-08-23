@@ -2,21 +2,19 @@
 
 #### 创建项目
 
-````javascript
+```javascript
 // 1. 全局安装vite
 npm i vite -g
 // 2. 创建项目
 npm init vite@latest
 // 3. 输入项目名称，选择模板
 // 4. 按提示运行npm install ， npm run dev
-````
-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
+```
 ![image-20220106103432239](/image-20220106103432239.png)
 
 看上面的截图，这里面没有vue+ts 所以后面要手动添加ts，如果有vue+ts直接选择就好。
 
 **vite.config.js **
-
 ```javascript
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'

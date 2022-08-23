@@ -48,6 +48,5 @@ git clone url 克隆一个远程库到本地
 
 　　 git update-index --no-assume-unchanged /path/to/file  #恢复跟踪
 　　 
-　　 <font color=red size=5>gray</font>
 
 
