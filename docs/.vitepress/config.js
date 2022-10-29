@@ -10,8 +10,8 @@ module.exports = {
     // 启动页面丝滑滚动
     smoothScroll: true,
     nav: [
-      { text: '笔记', link: '/html_css/index' },
-      { text: '胡说八道', link: '/guide/test' },
+      { text: '笔记', link: 'html_css/scss中的写法' },
+      { text: 'github', link: 'https://github.com/xiaoyan551/nonsense' },
       { text: '简书', link: 'https://www.jianshu.com/u/b5a09842e044' }
     ],
     sidebar: [
@@ -52,6 +52,10 @@ module.exports = {
           {
             text: '在vue项目中静态配置URL',
             link: '/project/在vue项目中静态配置URL'
+          },
+		  {
+            text: 'vite构建项目静态资源获取出现的问题',
+            link: '/project/vite构建项目静态资源获取出现的问题'
           }
         ]
       }
