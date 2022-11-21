@@ -1,0 +1,31 @@
+:root {
+  --vp-c-accent: #dab40b;
+  --vp-c-brand: #6da13f;
+  --vp-c-brand-light: #7ec242;
+  --vp-c-brand-lighter: #93d31c;
+  --vp-c-brand-dark: #668d11;
+  --vp-c-brand-darker: #52730d;
+  --vp-c-text-code: #5d6f5d;
+  /* --vp-code-block-bg: rgba(125, 125, 125, 0.04);
+  --vp-custom-block-tip-text: rgb(18, 181, 157);
+  --vp-custom-block-tip-border: rgba(18, 181, 157, 0.5);
+  --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1); */
+}
+
+.container .main {
+  margin-top: 80px !important;
+  flex-grow: inherit;
+  margin: auto;
+  /* text-align: center; */
+}
+
+.container .main .name {
+  font-size: 86px;
+  line-height: 100px;
+}
+
+.container .main .text {
+  font-size: 20px;
+  line-height: 1.2rem;
+  color: #5d6f5d;
+}
