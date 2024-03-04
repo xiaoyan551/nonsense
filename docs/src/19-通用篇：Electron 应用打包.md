@@ -282,7 +282,7 @@ gitHub Actions 有一些概念需要简单介绍下：
 
 拿 `rubick` 的 `github Actions` 配置文件举例：
 
-```yml
+```
 # .github/workflows/main.yml
 # Workflow 的名称
 name: Build

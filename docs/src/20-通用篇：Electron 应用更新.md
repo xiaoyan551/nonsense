@@ -270,7 +270,7 @@ releaseInfo: {
 ```
 
 这里，`publish` 中使用的是基于 `github` 提供给 `release` 包。然后在我们执行打包构建，会在 `build` 目录下生成一个 `latest.yml` 文件，记录着此次更新的一些信息，大致如下：
-```yml
+```
 # latest.yml
 version: 版本号
 path: 文件名路径

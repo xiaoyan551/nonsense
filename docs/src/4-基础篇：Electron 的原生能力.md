@@ -180,7 +180,7 @@ console.log(clipboard.readText('selection'));
 }
 ```
 接下来编写 `hello.cc` 文件：
-```C++
+```
 #include <napi.h>
 
 Napi::String Method(const Napi::CallbackInfo& info) {
