@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: nonsense
-  text: 一些学习笔记，一些胡说八道.
+  text: 一些学习笔记.
   actions:
     - theme: brand
       text: 查看笔记
