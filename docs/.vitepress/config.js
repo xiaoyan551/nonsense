@@ -34,30 +34,32 @@ module.exports = {
         },
         {
           text: 'vue',
-          items: [{ text: 'key的作用', link: '/vue/key的作用和原理' }]
+          items: [
+            { text: 'vue3项目搭建', link: '/vue/vue3项目搭建' },
+            { text: 'pinia', link: '/vue/pinia入门使用' },
+            { text: 'key的作用', link: '/vue/key的作用和原理' },
+          ]
         },
         {
-          text: '工具库',
+          text: 'react',
+          items: []
+        },
+        {
+          text: '工程化',
           items: [
-            { text: 'pinia', link: '/ecology/pinia入门使用' },
+            { text: '在项目中静态配置URL', link: '/engineering/在项目中静态配置URL' },
+            { text: 'vite构建项目静态资源获取出现的问题', link: '/engineering/vite构建项目静态资源获取出现的问题' },
+            { text: 'webpack打包时，将当前git信息写入项目', link: '/engineering/webpack打包时，将当前git信息写入项目' }
+          ]
+        },
+        {
+          text: '生态库使用笔记',
+          items: [
+            { text: 'axios封装', link: '/ecology/axios封装' },
             { text: 'openlayers', link: '/ecology/openlayers使用笔记' },
             { text: 'webSocket', link: '/ecology/websocket及stomp.js' },
             { text: 'git', link: '/ecology/git使用笔记' },
             { text: 'nginx', link: '/ecology/nginx配置' }
-          ]
-        },
-        {
-          text: '项目开发',
-          items: [
-            { text: 'vite + ts 项目搭建', link: '/project/vue3项目搭建' },
-            {
-              text: '在vue项目中静态配置URL',
-              link: '/project/在vue项目中静态配置URL'
-            },
-            {
-              text: 'vite构建项目静态资源获取出现的问题',
-              link: '/project/vite构建项目静态资源获取出现的问题'
-            }
           ]
         },
         {
@@ -69,6 +71,12 @@ module.exports = {
             { text: '版本更新', link: '/electron/版本更新' },
             { text: '静默打印', link: '/electron/静默打印' },
             { text: '调用DLL', link: '/electron/调用DLL' },
+          ]
+        },
+        {
+          text: '其他',
+          items: [
+            { text: 'mac安装小票打印机', link: '/other/mac安装小票打印机' }
           ]
         },
       ]

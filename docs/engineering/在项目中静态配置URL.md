@@ -1,4 +1,4 @@
-在vue项目中静态配置URL
+在项目中静态配置URL
 
 1. 在public目录下新建一个config.js文件，在window对象上添加一个属性
 
@@ -18,5 +18,5 @@ window.g = {
 3. 在要使用的地方通过 `window.g`使用
 
 ```ts
-const SOCKET_PATH = process.env.NODE_ENV !== 'production' ? 'ws://10.10.0.111:8088/ws' : (<any>window).g.SOCKET_PATH//10.10.0.120:8800
+const SOCKET_PATH = process.env.NODE_ENV !== 'production' ? 'ws://10.10.0.111:8088/ws' : (<any>window).g.SOCKET_PATH//ws://10.10.0.219:8080
 ```
