@@ -1,5 +1,7 @@
 # 调用Dll文件
 
+ffi-napi只支持electron20以下版本，新的electron可以使用koffi
+
 ```js
 // 调用 DLL 的代码
 const ffi = require('ffi-napi')
